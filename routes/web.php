@@ -60,9 +60,7 @@ Route::get("/kontak/data", "\App\Http\Controllers\KontakController@index");
 
 Route::post("/kontak/create", "\App\Http\Controllers\KontakController@create");
 
-Route::get("/kontak/form", function (){
-    return view("form_kontak");
-});
+Route::get("/kontak/form", "\App\Http\Controllers\KontakController@form");
 
 Route::get("/kontak/update/{id}", "\App\Http\Controllers\KontakController@update");
 
@@ -72,9 +70,7 @@ Route::get("/kontak/delete/{id}", "\App\Http\Controllers\KontakController@delete
 
 Route::get("/artikel/index", "\App\Http\Controllers\ArtikelController@index");
 
-Route::get("/login/form", function (){
-    return view("login");
-});
+Route::get("/login/form", "\App\Http\Controllers\ArtikelController@form");
 
 Route::post("/login/create", "\App\Http\Controllers\LoginController@create");
 

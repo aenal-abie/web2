@@ -4,9 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\DB;
 use App\Models\Kontak;
+use App\Models\Member;
 use Illuminate\Http\Request;
 
 class KontakController extends Controller {
+
+    public function form()
+    {
+        $members = Member::all();
+        return view("form_kontak", compact("members"));
+    }
 
     public function index()
     {

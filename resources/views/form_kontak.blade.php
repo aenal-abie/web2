@@ -1,5 +1,13 @@
 <form action ="{{url("kontak/create")}}" method="post">
 @csrf
+
+Member:
+<select name="member_id">
+    @foreach ($members as  $member)
+    <option value="{{$member->id}}">{{$member->nama}}</option>
+    @endforeach
+</select>
+<br/>
 Nama:
 <input type="text" name="nama"/>
 <br/>
